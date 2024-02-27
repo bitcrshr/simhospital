@@ -19,9 +19,9 @@ import (
 	"crypto/sha256"
 	"fmt"
 
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/monitoring"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/monitoring"
 )
 
 const (

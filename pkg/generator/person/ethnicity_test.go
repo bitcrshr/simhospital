@@ -19,9 +19,9 @@ import (
 	"math"
 	"testing"
 
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/test"
-	"github.com/google/simhospital/pkg/test/testwrite"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 )
 
 func TestEthnicityGenerator(t *testing.T) {

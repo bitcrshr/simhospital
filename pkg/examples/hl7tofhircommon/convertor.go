@@ -16,8 +16,8 @@
 package hl7tofhircommon
 
 import (
+	"github.com/bitcrshr/simhospital/pkg/hl7tofhirmap"
 	cpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/codes_go_proto"
-	"github.com/google/simhospital/pkg/hl7tofhirmap"
 )
 
 // Convertor knows how to map values found in HL7v2 messages to their FHIR equivalent.

@@ -17,9 +17,9 @@ package config
 import (
 	"context"
 
+	"github.com/bitcrshr/simhospital/pkg/files"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
-	"github.com/google/simhospital/pkg/files"
 )
 
 // HL7Config is the configuration for HL7 messages where the values are important for HL7 compliance or specific uses of the HL7 standard.

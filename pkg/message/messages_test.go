@@ -19,10 +19,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/test/testhl7"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/test/testhl7"
 )
 
 const (

@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/google/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/logging"
 )
 
 var (

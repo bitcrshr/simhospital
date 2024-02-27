@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"sort"
 
+	"github.com/bitcrshr/simhospital/pkg/state/persist"
 	"github.com/golang-collections/go-datastructures/queue"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/state/persist"
 )
 
 const (

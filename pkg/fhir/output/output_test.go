@@ -20,8 +20,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/test/testwrite"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 )
 
 func TestDirectoryOutput(t *testing.T) {

@@ -19,8 +19,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 type note struct {

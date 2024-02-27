@@ -21,11 +21,11 @@ import (
 	"text/template"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
 )
 
 // The fields in this block are HL7 message types Simulated Hospital supports.
@@ -866,7 +866,7 @@ func BuildUpdatePatientADTA08(h *HeaderInfo, p *ir.PatientInfo, includeFullPV1 b
 		return nil, errors.Wrap(err, "cannot build PID segment")
 	}
 	segments = append(segments, pid)
-	if (includeFullPV1) {
+	if includeFullPV1 {
 		pv1, err := BuildPV1(p)
 		if err != nil {
 			return nil, errors.Wrap(err, "cannot build PV1 segment")

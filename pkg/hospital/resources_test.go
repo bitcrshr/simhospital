@@ -19,13 +19,13 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	. "github.com/bitcrshr/simhospital/pkg/hospital"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/test/testfhir"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/google/simhospital/pkg/constants"
-	. "github.com/google/simhospital/pkg/hospital"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/test/testfhir"
 )
 
 // TestGenerateResources verifies the interaction between the `GenerateResources`

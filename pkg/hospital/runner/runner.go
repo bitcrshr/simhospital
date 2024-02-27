@@ -23,16 +23,16 @@ import (
 	"regexp"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/clock"
+	"github.com/bitcrshr/simhospital/pkg/hospital"
+	"github.com/bitcrshr/simhospital/pkg/hospital/runner/authentication"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/monitoring"
+	"github.com/bitcrshr/simhospital/pkg/rate"
+	"github.com/bitcrshr/simhospital/pkg/starter"
+	"github.com/gorilla/mux"
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
-	"github.com/gorilla/mux"
-	"github.com/google/simhospital/pkg/clock"
-	"github.com/google/simhospital/pkg/hospital"
-	"github.com/google/simhospital/pkg/hospital/runner/authentication"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/monitoring"
-	"github.com/google/simhospital/pkg/rate"
-	"github.com/google/simhospital/pkg/starter"
 )
 
 var (
@@ -158,10 +158,11 @@ func New(h *hospital.Hospital, config Config) (*Hospital, error) {
 // Run starts the Simulated Hospital.
 // It starts multiple servers including the Simulated Hospital dashboard.
 // The following happens in parallel and continuously while Simulated Hospital is running:
-// 1. Start pathways, which create events (e.g., patients are admitted in the
-//    hospital, test results, etc.).
-// 2. Run those events at the appropriate time, which generates HL7 messages.
-// 3. Process HL7 messages at the appropriate time.
+//  1. Start pathways, which create events (e.g., patients are admitted in the
+//     hospital, test results, etc.).
+//  2. Run those events at the appropriate time, which generates HL7 messages.
+//  3. Process HL7 messages at the appropriate time.
+//
 // The processing of pathways, events and messages can finish if Hospital.maxPathways is negative, otherwise Run() runs forever.
 // When the creation of pathways finishes, we can stop processing events after all our current events
 // are processed. When processing events finishes, we can stop processing messages after all our current
@@ -279,15 +280,15 @@ func createHTTPServer(ctx context.Context, addr string, handler http.Handler) *h
 // by taking into account the time that has already elapsed since
 // the last pathway run.
 // Eg:
-// - the rate changed from 1 pathway / hour to 4 pathway / hour,
-//   and last pathway was started 10 mins ago -> the next pathway will start
-//   in 5 mins, as the new Heartbeat value is now 15 mins.
-// - the rate changed from 4 pathway / hour to 1 pathway / hour,
-//   and last pathway was started 10 mins ago -> the next pathway will start
-//   in 50 mins, as the new Heartbeat value is now 1h.
-// - the rate was initially set to 0 pathway / hour (so no pathway was started initially)
-//   and was changed to 1 pathway / hour -> the next pathway will start after 1h elapses
-//   since the beginning of SH running.
+//   - the rate changed from 1 pathway / hour to 4 pathway / hour,
+//     and last pathway was started 10 mins ago -> the next pathway will start
+//     in 5 mins, as the new Heartbeat value is now 15 mins.
+//   - the rate changed from 4 pathway / hour to 1 pathway / hour,
+//     and last pathway was started 10 mins ago -> the next pathway will start
+//     in 50 mins, as the new Heartbeat value is now 1h.
+//   - the rate was initially set to 0 pathway / hour (so no pathway was started initially)
+//     and was changed to 1 pathway / hour -> the next pathway will start after 1h elapses
+//     since the beginning of SH running.
 //
 // Returns an error if the context is Done.
 func (h *Hospital) startPathways(ctx context.Context) error {

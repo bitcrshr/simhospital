@@ -22,12 +22,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/test"
-	"github.com/google/simhospital/pkg/test/testclock"
-	"github.com/google/simhospital/pkg/test/testdate"
-	"github.com/google/simhospital/pkg/test/testwrite"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test/testclock"
+	"github.com/bitcrshr/simhospital/pkg/test/testdate"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 
 	cpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/codes_go_proto"
 )

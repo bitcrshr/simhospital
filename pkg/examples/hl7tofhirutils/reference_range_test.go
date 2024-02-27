@@ -24,7 +24,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"google.golang.org/protobuf/testing/protocmp"
 
-	fhir "github.com/google/simhospital/pkg/fhircore"
+	fhir "github.com/bitcrshr/simhospital/pkg/fhircore"
 )
 
 func TestToQuantity(t *testing.T) {

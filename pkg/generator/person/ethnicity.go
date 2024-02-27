@@ -15,9 +15,9 @@
 package person
 
 import (
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/sample"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/sample"
 )
 
 // EthnicityGenerator generates ethnicity.

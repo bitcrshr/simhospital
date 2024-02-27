@@ -19,8 +19,8 @@ package hl7tofhirutils
 import (
 	"time"
 
+	fhir "github.com/bitcrshr/simhospital/pkg/fhircore"
 	pb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/datatypes_go_proto"
-	fhir "github.com/google/simhospital/pkg/fhircore"
 )
 
 // IsNewerMessage checks if the provided extensions contains a DateTime extension with the provided

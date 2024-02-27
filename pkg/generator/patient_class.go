@@ -15,8 +15,8 @@
 package generator
 
 import (
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/sample"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/sample"
 )
 
 type patientClassGenerator struct {

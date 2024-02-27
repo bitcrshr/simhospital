@@ -23,11 +23,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/test/testclock"
+	"github.com/bitcrshr/simhospital/pkg/test/testlocation"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/google/simhospital/pkg/test/testclock"
-	"github.com/google/simhospital/pkg/test/testlocation"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 const defaultPathwayName = "random_pathway"

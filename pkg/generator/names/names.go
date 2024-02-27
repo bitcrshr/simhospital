@@ -18,8 +18,8 @@ package names
 import (
 	"math/rand"
 
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/gender"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/gender"
 )
 
 // Generator is a generator of names.

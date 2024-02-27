@@ -22,10 +22,10 @@ import (
 	"io"
 	"strconv"
 
+	"github.com/bitcrshr/simhospital/pkg/files"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/sample"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/files"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/sample"
 )
 
 // nilKey is a keyword to use in CSV files that are loaded with loadCSVWithFrequency.
@@ -48,24 +48,27 @@ type RecordWithFreq struct {
 // Rows for which all items (except the frequency) are the keyword "nil" are represented as a
 // nil RecordWithFreq.Value. Callers need to check for the presence of a nil Value.
 // Example format for the file:
-//   # Distribution of patient classes.
-//   OUTPATIENT,EMERGENCY,10
-//   nil,nil,20
+//
+//	# Distribution of patient classes.
+//	OUTPATIENT,EMERGENCY,10
+//	nil,nil,20
+//
 // Output for columnKeys ("class", "type") :
-// []RecordWithFreq {
-//	{
-//		Value: map[string]string{
-//			"class": "OUTPATIENT",
-//			"type": "EMERGENCY",
+//
+//	[]RecordWithFreq {
+//		{
+//			Value: map[string]string{
+//				"class": "OUTPATIENT",
+//				"type": "EMERGENCY",
+//			},
+//			Weight: 10,
 //		},
-//		Weight: 10,
-//	},
-//	{
-//		Value: nil,
-//		Weight: 20,
-//	},
-//  (etc).
-//}
+//		{
+//			Value: nil,
+//			Weight: 20,
+//		},
+//	 (etc).
+//	}
 func loadCSVWithFrequency(ctx context.Context, fName string, columnKeys []string) ([]RecordWithFreq, error) {
 	b, err := files.Read(ctx, fName)
 	if err != nil {

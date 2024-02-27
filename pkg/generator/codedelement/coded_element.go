@@ -19,11 +19,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/google/simhospital/pkg/clock"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/sample"
+	"github.com/bitcrshr/simhospital/pkg/clock"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/sample"
 )
 
 // CodeDescriptionMapping contains a mapping between code and description,

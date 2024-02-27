@@ -21,8 +21,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/test/testmetrics"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/test/testmetrics"
 )
 
 const (

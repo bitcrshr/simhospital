@@ -19,10 +19,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/orderprofile"
+	"github.com/bitcrshr/simhospital/pkg/test/testclock"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/orderprofile"
-	"github.com/google/simhospital/pkg/test/testclock"
 )
 
 func TestGender(t *testing.T) {

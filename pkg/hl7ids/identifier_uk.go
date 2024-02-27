@@ -19,8 +19,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/bitcrshr/simhospital/pkg/hl7"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/hl7"
 )
 
 // Options contains the configuration for getting identifiers.

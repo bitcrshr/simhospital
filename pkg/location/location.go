@@ -19,13 +19,13 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/bitcrshr/simhospital/pkg/files"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/monitoring"
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
 	"gopkg.in/yaml.v2"
-	"github.com/google/simhospital/pkg/files"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/monitoring"
 )
 
 const aAndEID = "ED"

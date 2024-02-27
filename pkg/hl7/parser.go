@@ -30,11 +30,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
 	"github.com/pkg/errors"
-	"golang.org/x/text/encoding/charmap"
 	"golang.org/x/text/encoding"
+	"golang.org/x/text/encoding/charmap"
 	"golang.org/x/text/encoding/unicode"
-	"github.com/google/simhospital/pkg/constants"
 )
 
 const (

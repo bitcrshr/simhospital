@@ -22,12 +22,12 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/hospital"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/hospital"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/pathway"
 )
 
 const (
@@ -139,16 +139,17 @@ func (ps *PathwayStarter) sendMessages(text string) ([]string, error) {
 }
 
 // requestPathwayOrSendMessage attempts to run the pathway or send a message as follows:
-// 1. If the text starts with MSH, send as messages.
-// 2. Attempt to run the pathway using the string as a name. If it fails,
-// 3. Attempt to run the pathway using the string as: "pathway_name: MRN". If it fails,
-// 4. Attempt to run the pathway using the string as: "pathway_name: FirstName Surname". If it fails,
-// 5. Attempt to run the pathway using the string as a yml format definition. If it fails,
-// 6. Attempt to run the pathway using the string as a yml format definition that includes the
-//    pathway name, i.e.,
-//    pathway_name:
-//      person:
-//        age: ...
+//  1. If the text starts with MSH, send as messages.
+//  2. Attempt to run the pathway using the string as a name. If it fails,
+//  3. Attempt to run the pathway using the string as: "pathway_name: MRN". If it fails,
+//  4. Attempt to run the pathway using the string as: "pathway_name: FirstName Surname". If it fails,
+//  5. Attempt to run the pathway using the string as a yml format definition. If it fails,
+//  6. Attempt to run the pathway using the string as a yml format definition that includes the
+//     pathway name, i.e.,
+//     pathway_name:
+//     person:
+//     age: ...
+//
 // It returns the list of strings that describe the outcome to be set as the response, or an error.
 func (ps *PathwayStarter) requestPathwayOrSendMessage(text string) ([]string, error) {
 	if strings.HasPrefix(text, "MSH") {

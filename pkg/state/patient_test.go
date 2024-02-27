@@ -17,8 +17,8 @@ package state
 import (
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/ir"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/ir"
 )
 
 func TestPatient_GetOrder(t *testing.T) {

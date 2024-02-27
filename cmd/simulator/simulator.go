@@ -26,14 +26,14 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/hospital"
+	"github.com/bitcrshr/simhospital/pkg/hospital/runner"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/starter"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/hospital"
-	"github.com/google/simhospital/pkg/hospital/runner"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/starter"
 )
 
 var (

@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"math/rand"
 
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/files"
+	"github.com/bitcrshr/simhospital/pkg/ir"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/files"
-	"github.com/google/simhospital/pkg/ir"
 )
 
 // OrderProfiles contains Order Profile information.

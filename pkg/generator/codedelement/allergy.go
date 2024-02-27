@@ -19,11 +19,11 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/google/simhospital/pkg/clock"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/hl7tofhirmap"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/clock"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/hl7tofhirmap"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 
 	cpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/codes_go_proto"
 )

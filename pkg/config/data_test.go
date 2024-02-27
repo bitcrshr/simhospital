@@ -19,11 +19,11 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/sample"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/sample"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 var (

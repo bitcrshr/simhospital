@@ -19,12 +19,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/doctor"
-	"github.com/google/simhospital/pkg/location"
-	"github.com/google/simhospital/pkg/orderprofile"
-	"github.com/google/simhospital/pkg/test"
-	"github.com/google/simhospital/pkg/test/testclock"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/doctor"
+	"github.com/bitcrshr/simhospital/pkg/location"
+	"github.com/bitcrshr/simhospital/pkg/orderprofile"
+	"github.com/bitcrshr/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test/testclock"
 )
 
 func TestValidateProdPathways(t *testing.T) {

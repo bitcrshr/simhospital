@@ -20,11 +20,11 @@ import (
 	"context"
 	"strings"
 
+	"github.com/bitcrshr/simhospital/pkg/files"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/sample"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
-	"github.com/google/simhospital/pkg/files"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/sample"
 )
 
 var log = logging.ForCallerPackage()

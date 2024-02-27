@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/google/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
 )
 
 const (

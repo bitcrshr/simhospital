@@ -18,8 +18,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/google/simhospital/pkg/generator/header"
-	"github.com/google/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/generator/header"
+	"github.com/bitcrshr/simhospital/pkg/test"
 )
 
 func TestValidateProdConfig(t *testing.T) {

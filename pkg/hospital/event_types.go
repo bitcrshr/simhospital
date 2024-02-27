@@ -20,15 +20,15 @@ import (
 	"strings"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/location"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/message"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/state"
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/location"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/message"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/state"
 )
 
 const locationError = "patient location error"

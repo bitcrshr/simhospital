@@ -21,14 +21,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test/testclock"
+	"github.com/bitcrshr/simhospital/pkg/test/testdate"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/test"
-	"github.com/google/simhospital/pkg/test/testclock"
-	"github.com/google/simhospital/pkg/test/testdate"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 func TestDiagOrProcGenerator_Random(t *testing.T) {

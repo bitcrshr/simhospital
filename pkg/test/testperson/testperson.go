@@ -18,7 +18,7 @@ package testperson
 import (
 	"time"
 
-	"github.com/google/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/ir"
 )
 
 // New returns a Person with all fields populated.

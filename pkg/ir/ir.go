@@ -22,7 +22,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/google/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/constants"
 )
 
 // Person represents a person.
@@ -271,13 +271,13 @@ type PrimaryFacility struct {
 
 // PatientInfo represents a patient and related information.
 type PatientInfo struct {
-	Person          *Person
-	Class           string // EMERGENCY / INPATIENT / OUTPATIENT / PREADMIT / RECURRING PATIENT / OBSTETRICS
-	Type            string // values are defined per-trust if this field is used
-	VisitID         uint64
-	HospitalService string
-	AdmitReason     string
-	ReadmissionIndicator  string // R is the only value suggested in the hl7 specification
+	Person               *Person
+	Class                string // EMERGENCY / INPATIENT / OUTPATIENT / PREADMIT / RECURRING PATIENT / OBSTETRICS
+	Type                 string // values are defined per-trust if this field is used
+	VisitID              uint64
+	HospitalService      string
+	AdmitReason          string
+	ReadmissionIndicator string // R is the only value suggested in the hl7 specification
 
 	// Location is the current patient location.
 	Location      *PatientLocation

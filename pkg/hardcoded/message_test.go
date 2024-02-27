@@ -22,12 +22,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/generator/header"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/message"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/generator/header"
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/message"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 const (
@@ -92,7 +92,7 @@ const (
 )
 
 var (
-	arbitraryTime = time.Date(2018, 2, 12, 0, 0, 0, 0, time.UTC)
+	arbitraryTime                = time.Date(2018, 2, 12, 0, 0, 0, 0, time.UTC)
 	defaultAdmissionDate         = time.Date(2017, 1, 26, 15, 24, 21, 0, time.UTC)
 	defaultDischargeDate         = time.Date(2018, 2, 26, 15, 24, 21, 0, time.UTC)
 	defaultTransferDate          = time.Date(2018, 4, 28, 22, 38, 13, 0, time.UTC)
@@ -415,4 +415,3 @@ func testDoctor() *ir.Doctor {
 		Prefix:    defaultDoctorPrefix,
 	}
 }
-

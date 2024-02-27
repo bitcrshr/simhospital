@@ -19,7 +19,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/google/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/config"
 )
 
 // ConfigType represents the type of configuration, eg: test, prod, etc.

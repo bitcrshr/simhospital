@@ -17,13 +17,13 @@ package hospital
 import (
 	"context"
 
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/processor"
+	"github.com/bitcrshr/simhospital/pkg/state"
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/processor"
-	"github.com/google/simhospital/pkg/state"
 )
 
 // HasEvents returns whether there are events in the Event queue, independently of when they are due.

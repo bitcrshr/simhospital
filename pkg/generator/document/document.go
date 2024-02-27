@@ -20,10 +20,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/generator/text"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/generator/text"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 )
 
 const (

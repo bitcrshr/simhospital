@@ -18,12 +18,12 @@ import (
 	"context"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	. "github.com/bitcrshr/simhospital/pkg/location"
+	"github.com/bitcrshr/simhospital/pkg/test/testlocation"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/google/simhospital/pkg/ir"
-	. "github.com/google/simhospital/pkg/location"
-	"github.com/google/simhospital/pkg/test/testlocation"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 const aAndEID = "ED"

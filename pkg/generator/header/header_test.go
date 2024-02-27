@@ -19,14 +19,14 @@ import (
 	"os"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/message"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
 	"github.com/sirupsen/logrus"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/message"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/test"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 var arbitraryStep = &pathway.Step{Discharge: &pathway.Discharge{}}

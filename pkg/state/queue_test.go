@@ -18,9 +18,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/state/persist"
+	"github.com/bitcrshr/simhospital/pkg/test/teststate"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/state/persist"
-	"github.com/google/simhospital/pkg/test/teststate"
 )
 
 func TestWrappedQueue_Put(t *testing.T) {

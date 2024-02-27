@@ -19,9 +19,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/test/testhl7"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/test/testhl7"
 )
 
 func TestMain(m *testing.M) {

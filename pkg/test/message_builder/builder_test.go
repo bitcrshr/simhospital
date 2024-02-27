@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
 )
 
 func TestMain(m *testing.M) {

@@ -18,7 +18,7 @@ package testaddress
 import (
 	"fmt"
 
-	"github.com/google/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/ir"
 )
 
 // ArbitraryGenerator is a generator of addresses with predefined country and cities,
@@ -33,11 +33,12 @@ type Generator struct {
 }
 
 // Random returns a deterministically different British address each time. The address will be in the following formats with equal probabilities:
-// 		n Test House
-//		n Test Street
-// 		AB# #CD
-//		City
-//		Country
+//
+//	n Test House
+//	n Test Street
+//	AB# #CD
+//	City
+//	Country
 //
 // Where:
 // n is a integer number that starts from 1 and increases by 1 for every address generated.

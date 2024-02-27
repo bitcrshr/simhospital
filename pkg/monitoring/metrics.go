@@ -21,9 +21,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/bitcrshr/simhospital/pkg/logging"
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/google/simhospital/pkg/logging"
 )
 
 var (

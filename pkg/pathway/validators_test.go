@@ -20,17 +20,17 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/doctor"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/orderprofile"
+	"github.com/bitcrshr/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test/testclock"
+	"github.com/bitcrshr/simhospital/pkg/test/testlocation"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/doctor"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/orderprofile"
-	"github.com/google/simhospital/pkg/test"
-	"github.com/google/simhospital/pkg/test/testclock"
-	"github.com/google/simhospital/pkg/test/testlocation"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 var (

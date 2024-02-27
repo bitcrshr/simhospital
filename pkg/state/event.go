@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/state/persist"
 	"github.com/golang-collections/go-datastructures/queue"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/state/persist"
 )
 
 // Event is a stateful object representing Simulated Hospital events currently in progress.

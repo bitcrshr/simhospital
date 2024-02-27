@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
+	fhir "github.com/bitcrshr/simhospital/pkg/fhircore"
 	pb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/datatypes_go_proto"
-	fhir "github.com/google/simhospital/pkg/fhircore"
 )
 
 const dateExt = "DateExtURL"

@@ -15,11 +15,11 @@
 package codedelement
 
 import (
-	"github.com/google/simhospital/pkg/clock"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/clock"
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 )
 
 // DiagOrProcGenerator is a generator of Diagnoses or Procedures.

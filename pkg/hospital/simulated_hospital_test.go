@@ -26,27 +26,27 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/generator/header"
+	"github.com/bitcrshr/simhospital/pkg/hardcoded"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	. "github.com/bitcrshr/simhospital/pkg/hospital"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/message"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/processor"
+	"github.com/bitcrshr/simhospital/pkg/state"
+	"github.com/bitcrshr/simhospital/pkg/state/persist"
+	"github.com/bitcrshr/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test/testhl7"
+	"github.com/bitcrshr/simhospital/pkg/test/testhospital"
+	"github.com/bitcrshr/simhospital/pkg/test/testlocation"
+	"github.com/bitcrshr/simhospital/pkg/test/testmetrics"
+	"github.com/bitcrshr/simhospital/pkg/test/teststate"
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/protobuf/testing/protocmp"
-	"github.com/google/simhospital/pkg/generator/header"
-	"github.com/google/simhospital/pkg/hardcoded"
-	"github.com/google/simhospital/pkg/hl7"
-	. "github.com/google/simhospital/pkg/hospital"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/message"
-	"github.com/google/simhospital/pkg/pathway"
-	"github.com/google/simhospital/pkg/processor"
-	"github.com/google/simhospital/pkg/state/persist"
-	"github.com/google/simhospital/pkg/state"
-	"github.com/google/simhospital/pkg/test"
-	"github.com/google/simhospital/pkg/test/testhl7"
-	"github.com/google/simhospital/pkg/test/testhospital"
-	"github.com/google/simhospital/pkg/test/testlocation"
-	"github.com/google/simhospital/pkg/test/testmetrics"
-	"github.com/google/simhospital/pkg/test/teststate"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 var (
@@ -581,7 +581,7 @@ func TestRunPathway_StepTypes(t *testing.T) {
 			if admitPV1.ReAdmissionIndicator == nil {
 				t.Fatal("admitPV1.ReAdmissionIndicator=<nil>; want non nil")
 			}
-      if got, want := admitPV1.ReAdmissionIndicator.String(), "R"; got != want {
+			if got, want := admitPV1.ReAdmissionIndicator.String(), "R"; got != want {
 				t.Errorf("admitPV1.ReAdmissionIndicator.String()=%q, want %q", got, want)
 			}
 			admitPV2 := testhl7.PV2(t, messages[0])

@@ -24,8 +24,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/bitcrshr/simhospital/pkg/files"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/files"
 )
 
 var digitsPattern = regexp.MustCompile("^\\d+$")
@@ -34,10 +34,10 @@ var digitsPattern = regexp.MustCompile("^\\d+$")
 // The files contain the top baby names by year.
 // It expects the following format of the file:
 //
-//   RANK,1904,1914,1924
-//   ,,,,,,,,,,
-//   1,MARY,MARY,MARGARET
-//   2,FLORENCE,MARGARET,MARY
+//	RANK,1904,1914,1924
+//	,,,,,,,,,,
+//	1,MARY,MARY,MARGARET
+//	2,FLORENCE,MARGARET,MARY
 //
 // The first line (the header) represents the years in chronological order.
 // The rest of lines contain the rank number, followed by the Names with

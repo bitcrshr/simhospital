@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/google/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/constants"
 )
 
 type valRange struct {

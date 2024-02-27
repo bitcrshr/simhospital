@@ -19,8 +19,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/constants"
 )
 
 var (

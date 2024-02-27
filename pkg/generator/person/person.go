@@ -23,12 +23,12 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/google/simhospital/pkg/clock"
-	"github.com/google/simhospital/pkg/gender"
-	"github.com/google/simhospital/pkg/generator/id"
-	"github.com/google/simhospital/pkg/generator/names"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/clock"
+	"github.com/bitcrshr/simhospital/pkg/gender"
+	"github.com/bitcrshr/simhospital/pkg/generator/id"
+	"github.com/bitcrshr/simhospital/pkg/generator/names"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 )
 
 // AddressGenerator is an interface to generate addresses.

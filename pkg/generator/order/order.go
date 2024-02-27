@@ -20,18 +20,18 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/doctor"
+	"github.com/bitcrshr/simhospital/pkg/generator/id"
+	"github.com/bitcrshr/simhospital/pkg/hl7tofhirmap"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/message"
+	"github.com/bitcrshr/simhospital/pkg/orderprofile"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 	cpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/codes_go_proto"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/doctor"
-	"github.com/google/simhospital/pkg/generator/id"
-	"github.com/google/simhospital/pkg/hl7tofhirmap"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/message"
-	"github.com/google/simhospital/pkg/orderprofile"
-	"github.com/google/simhospital/pkg/pathway"
 )
 
 var log = logging.ForCallerPackage()

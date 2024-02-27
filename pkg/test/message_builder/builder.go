@@ -28,9 +28,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/message"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/message"
 )
 
 var (

@@ -21,11 +21,11 @@ import (
 	"math/rand"
 	"reflect"
 
+	"github.com/bitcrshr/simhospital/pkg/files"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
-	"github.com/google/simhospital/pkg/files"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
 )
 
 var log = logging.ForCallerPackage()

@@ -18,7 +18,7 @@ package testdate
 import (
 	"time"
 
-	"github.com/google/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/ir"
 )
 
 // Generator is a generator of deterministic random dates.

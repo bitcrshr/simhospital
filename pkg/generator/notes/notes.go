@@ -25,12 +25,12 @@ import (
 	"strings"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/config"
+	"github.com/bitcrshr/simhospital/pkg/files"
+	"github.com/bitcrshr/simhospital/pkg/generator/text"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/config"
-	"github.com/google/simhospital/pkg/files"
-	"github.com/google/simhospital/pkg/generator/text"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
 )
 
 const (

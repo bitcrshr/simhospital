@@ -18,8 +18,8 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/bitcrshr/simhospital/pkg/ir"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/ir"
 )
 
 const generatedIDPattern = "generated-%d"

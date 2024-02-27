@@ -21,7 +21,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/google/simhospital/pkg/test"
+	"github.com/bitcrshr/simhospital/pkg/test"
 )
 
 var (

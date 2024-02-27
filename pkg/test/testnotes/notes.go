@@ -18,8 +18,8 @@ package testnotes
 import (
 	"errors"
 
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/pathway"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/pathway"
 )
 
 // Generator generates notes for testing.

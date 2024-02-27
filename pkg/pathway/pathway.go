@@ -25,11 +25,11 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/clock"
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/orderprofile"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/clock"
-	"github.com/google/simhospital/pkg/constants"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/orderprofile"
 )
 
 // The following constants represent step types.
@@ -136,11 +136,11 @@ const (
 // It produces an ADT^A08 message (Update patient information) if the person is an inpatient,
 // or an ADT^A31 (Update person information) if the person is not an inpatient.
 type UpdatePerson struct {
-	Person     *Person
-	Diagnoses  []*DiagnosisOrProcedure
-	Procedures []*DiagnosisOrProcedure
-	Allergies  []Allergy
-	IncludeFullPV1 bool   `yaml:"include_full_pv1,omitempty"`
+	Person         *Person
+	Diagnoses      []*DiagnosisOrProcedure
+	Procedures     []*DiagnosisOrProcedure
+	Allergies      []Allergy
+	IncludeFullPV1 bool `yaml:"include_full_pv1,omitempty"`
 }
 
 // OptionalRandomString is a string that can be set to a normal string, or RANDOM,
@@ -330,7 +330,6 @@ type Admission struct {
 	AdmitReason string    `yaml:"admit_reason,omitempty"`
 	Readmission string    `yaml:"readmission,omitempty"`
 }
-
 
 // Transfer is a step to transfer the patient to a different location.
 // It produces an ADT^A02 message.
@@ -1193,7 +1192,8 @@ func (p *Pathway) Runnable() (Pathway, error) {
 // If time is negative, the step is inserted in History; if positive, in Pathway.
 // (1) It will add a delay step at pathway end if pathway time < t, or
 // (2) Break up the delay step into two smaller ones if t is in the middle of it,
-// 	   and insert the step in between those two delays.
+//
+//	and insert the step in between those two delays.
 func (p *Pathway) insertAtTime(s Step, t time.Duration) error {
 	if t < time.Duration(0) {
 		return p.insertInHistory(s, t)
@@ -1265,6 +1265,7 @@ func (p *Pathway) insertInPathway(s Step, t time.Duration) error {
 // Pathway time is determined by setting .From = .To of a Delay to a value returned by Random(),
 // which results in all subsequent calls to Random() returning that value.
 // This is done for all Delay steps up to time t; if there are none, pathway time is zero.
+//
 //	(1) If there is a delay that ends at time t, we return index after that delay and t.
 //	(2) If the pathway has a delay step during and lasting over t,
 //		we return index where delay is and pathway time after that step.

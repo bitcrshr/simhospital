@@ -29,14 +29,14 @@ import (
 	"strings"
 	"time"
 
+	"github.com/bitcrshr/simhospital/pkg/files"
+	"github.com/bitcrshr/simhospital/pkg/generator/header"
+	"github.com/bitcrshr/simhospital/pkg/hl7"
+	"github.com/bitcrshr/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/logging"
+	"github.com/bitcrshr/simhospital/pkg/message"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
-	"github.com/google/simhospital/pkg/files"
-	"github.com/google/simhospital/pkg/generator/header"
-	"github.com/google/simhospital/pkg/hl7"
-	"github.com/google/simhospital/pkg/ir"
-	"github.com/google/simhospital/pkg/logging"
-	"github.com/google/simhospital/pkg/message"
 )
 
 // pidSegmentPlaceholder defines a placeholder for the PID segments, which

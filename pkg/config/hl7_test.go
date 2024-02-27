@@ -18,8 +18,8 @@ import (
 	"context"
 	"testing"
 
+	"github.com/bitcrshr/simhospital/pkg/test/testwrite"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/simhospital/pkg/test/testwrite"
 )
 
 func TestLoadHL7Config(t *testing.T) {

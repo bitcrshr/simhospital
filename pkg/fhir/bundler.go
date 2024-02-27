@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/google/simhospital/pkg/constants"
-	fhircore "github.com/google/simhospital/pkg/fhircore"
-	"github.com/google/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/constants"
+	fhircore "github.com/bitcrshr/simhospital/pkg/fhircore"
+	"github.com/bitcrshr/simhospital/pkg/ir"
 
 	cpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/codes_go_proto"
 	dpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/datatypes_go_proto"

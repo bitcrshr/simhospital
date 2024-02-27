@@ -19,8 +19,8 @@ import (
 	"math/rand"
 	"regexp"
 
+	"github.com/bitcrshr/simhospital/pkg/constants"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/constants"
 )
 
 const valueFormat = "%.2f"
@@ -135,16 +135,16 @@ func (g *ValueGenerator) Random(randomType string) (string, error) {
 // ie between (g.from, g.to) exclusive.
 //
 // If ValueGenerator represents a right open range, ie: >g.from (g.to is invalid):
-// - if "from" is positive, the normal value is generated from (g.from, 10 x g.from).
-// - if "from" is negative, the normal value is generated from (g.from, 0) to only allow negative numbers.
-// - if "from" is 0, the normal value is generated from (g.from, 10); this is an arbitrary choice,
-//   as we don't really know what order of magnitude the values should be in.
+//   - if "from" is positive, the normal value is generated from (g.from, 10 x g.from).
+//   - if "from" is negative, the normal value is generated from (g.from, 0) to only allow negative numbers.
+//   - if "from" is 0, the normal value is generated from (g.from, 10); this is an arbitrary choice,
+//     as we don't really know what order of magnitude the values should be in.
 //
 // If ValueGenerator represents a left open range, ie: <g.to (g.from is invalid):
-// - if "to" is positive, the normal value is generated from (0, g.to) to only allow positive values.
-// - if "to" is negative, the normal value is generated from (10 x g.to, g.to).
-// - if "to" is 0, the normal value is generated from (-10, g.to); this is an arbitrary choice,
-//   as we don't really know what order of magnitude the values should be in.
+//   - if "to" is positive, the normal value is generated from (0, g.to) to only allow positive values.
+//   - if "to" is negative, the normal value is generated from (10 x g.to, g.to).
+//   - if "to" is 0, the normal value is generated from (-10, g.to); this is an arbitrary choice,
+//     as we don't really know what order of magnitude the values should be in.
 //
 // If g == nil, returns 0.
 // Returns error if both: start and end of the range are open.
@@ -194,10 +194,10 @@ func (g *ValueGenerator) Normal() (string, error) {
 // If the start of normal range is positive, it will return value between (0, g.from) exclusive.
 // If the start of normal range is negative, it will return value between (10 x g.from, g.from) exclusive.
 // Returns an error in any of the following situations:
-// - the receiver is nil
-// - the start of the normal range is open
-// - the start of the normal range is 0 -> the assumption is that if start of the normal range is positive,
-//   the negative numbers are invalid, thus it is impossible to generate the abnormal low value if range starts at 0
+//   - the receiver is nil
+//   - the start of the normal range is open
+//   - the start of the normal range is 0 -> the assumption is that if start of the normal range is positive,
+//     the negative numbers are invalid, thus it is impossible to generate the abnormal low value if range starts at 0
 func (g *ValueGenerator) AbnormalLow() (string, error) {
 	if g == nil {
 		return "", errors.New("cannot generate abnormal low value for nil ValueGenerator")
@@ -220,10 +220,10 @@ func (g *ValueGenerator) AbnormalLow() (string, error) {
 // If the end of normal range is positive, it will return value between (g.to, 10 x g.to) exclusive.
 // If the end of normal range is negative, it will return value between (g.to, 0) exclusive.
 // Returns an error in any of the following situations:
-// - the receiver is nil
-// - the end of the normal range is open
-// - the end of the normal range is 0 -> the assumption is that if the end of the normal range is negative,
-//   the positive numbers are invalid, thus it is impossible to generate the abnormal high value if range ends at 0
+//   - the receiver is nil
+//   - the end of the normal range is open
+//   - the end of the normal range is 0 -> the assumption is that if the end of the normal range is negative,
+//     the positive numbers are invalid, thus it is impossible to generate the abnormal high value if range ends at 0
 func (g *ValueGenerator) AbnormalHigh() (string, error) {
 	if g == nil {
 		return "", errors.New("cannot generate abnormal high value for nil ValueGenerator")

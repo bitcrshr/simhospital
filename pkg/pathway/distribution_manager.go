@@ -20,8 +20,8 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/bitcrshr/simhospital/pkg/sample"
 	"github.com/pkg/errors"
-	"github.com/google/simhospital/pkg/sample"
 )
 
 const (

@@ -20,7 +20,7 @@ import (
 	"encoding/gob"
 	"errors"
 
-	"github.com/google/simhospital/pkg/ir"
+	"github.com/bitcrshr/simhospital/pkg/ir"
 )
 
 // Writer is a resource writer that exposes the resources it has written to be retrieved by tests.
